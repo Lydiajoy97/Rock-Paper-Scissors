@@ -1,0 +1,6 @@
+img .landing-img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+}
