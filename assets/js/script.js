@@ -1,34 +1,29 @@
-const button = document.querySelector(".button");
-const scores = document.querySelector(".scores");
-let player; 
-let computer; 
-let score; 
+const userChoiceResult = document.getElementById('user-choice')
+const computerChoiceResult = document.getElementById('comp-choice')
+const result = document.getElementById('result')
+const choices = document.querySelectorAll('button')
+let userChoice
+let player 
+let computer
 
-button.forEach(button => button.addEventListener("click", () => {
+choices.forEach(choice => choice.addEventListener('click', (e) => {})) 
 
-    player = button.textContent;
-    computerTurn();
+function winnersScore(){ 
+    if (player == computer){
+          return "It's a draw!"
+        }
+        else if (computer == "Rock"){
+          return (player == "Paper") ? "You Won!" : "Too Bad!"
+        }
+        else if (computer == "Paper"){
+          return (player == "Scissors") ? "You Won!" : "Too Bad!"
+      }
+      else if (computer == "Scissors"){
+          return (player == "Rock") ? "You Won!" : "Too Bad!"
+      }}
 
-}));
 
-function computerTurn(){
-    const ranNum = Math.Floor(Math.Random(* 3));
+function randomComputerChoice() {
+    const ranNum = Math.floor (Math.random * 3) + 1
+    console.log(ranNum)
 }
-
-function playerTurn(){
-
-}
-
-function winnersScore(){
-  if (player == computer){
-    return "It's a draw!"
-  }
-  else if (computer == "Rock"){
-    return (player == "Paper") ? "You Won!" : "Too Bad!"
-  }
-  else if (computer == "Paper"){
-    return (player == "Scissors") ? "You Won!" : "Too Bad!"
-}
-else if (computer == "Scissors"){
-    return (player == "Rock") ? "You Won!" : "Too Bad!"
-}}
