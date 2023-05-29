@@ -4,7 +4,7 @@ let player;
 let computer; 
 let score; 
 
-button.forEach(button => button.addEventListener("click,"() => {
+button.forEach(button => button.addEventListener("click", () => {
 
     player = button.textContent;
     computerTurn();

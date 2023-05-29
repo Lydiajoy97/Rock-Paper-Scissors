@@ -4,6 +4,7 @@
     align-items: center;
     flex-wrap: wrap;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ccc;
  }
  
  img {
@@ -20,7 +21,7 @@
 
 button {
     border-radius: 50%;
-    background-color: black;
+    background-color:grey;
     border: none;
 }
 
