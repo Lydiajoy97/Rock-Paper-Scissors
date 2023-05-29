@@ -12,7 +12,7 @@ button.forEach(button => button.addEventListener("click", () => {
 }));
 
 function computerTurn(){
-
+    const ranNum = Math.Floor(Math.Random(* 3));
 }
 
 function playerTurn(){
