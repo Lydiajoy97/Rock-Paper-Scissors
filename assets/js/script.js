@@ -14,3 +14,12 @@ button.forEach(button => button.addEventListener("click,"() => {
 function computerTurn(){
 
 }
+
+function playerTurn(){
+
+}
+
+function winnersScore(){
+
+}
+
