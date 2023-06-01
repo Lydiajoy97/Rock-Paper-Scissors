@@ -18,13 +18,14 @@ function handleScissors(e) {
 }
 
 function handlePlay(e) {
-  
+  console.log("User choice is: " + userChoice);
+  let CPUChoice = generateCPU();
 }
 
 function generateCPU() {
-
+  return Math.random() * (2-0) +1;
 }
 
 function calculateWinner(user, CPU) {
-  
+
 }
