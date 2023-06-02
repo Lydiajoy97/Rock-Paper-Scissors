@@ -5,8 +5,6 @@ var scissors = 2;
 
 var userChoice; 
 
-document.getElementsByClassName("buttons").addEventListener("click", handlePlay);
-
 function handleRock(e) {
   userChoice = rock;
 }
@@ -20,8 +18,12 @@ function handleScissors(e) {
 }
 
 function handlePlay(e) {
-  let CPUChoice = generateCPU();
+  let userChoice = element.addEventListener("click");
+  let CPUChoice = Math.random() * (2-0) +1;
+  let result = calculateWinner();
 }
+
+// This adds a score of 1 to the user or computer depending on who wins. Written using the Love Maths Tutorial.
 
 function incrementScore() {
   let oldScore = parseInt(getElementsById("userChoice").innerText);
@@ -33,12 +35,15 @@ function incrementCPUResult() {
   document.getElementsById("CPUChoice").innerText = ++CPUOldScore;
 }
 
-function generateCPU() {
+//generates computers choice
+
+/* function generateCPU() {
   return Math.random() * (2-0) +1;
-}
+}*/
+
+//calcutes winner based on if statements
 
 function calculateWinner(user, CPU) {
-// if statements here
 if ( userChoice === CPUChoice) {
   alert ("It's a Draw!")
   incrementCPUResult();
