@@ -9,22 +9,28 @@ document.getElementsByClassName("buttons").addEventListener("click", handlePlay)
 
 function handleRock(e) {
   userChoice = rock;
-  alert ("you clicked rock");
 }
 
 function handlePaper(e) {
   userChoice = paper;
-  alert ("you clicked paper");
 }
 
 function handleScissors(e) {
   userChoice = scissors
-  alert ("you clicked scissors");
 }
 
 function handlePlay(e) {
-  console.log("User choice is: ${userChoice}" + userChoice);
   let CPUChoice = generateCPU();
+}
+
+function incrementScore() {
+  let oldScore = parseInt(getElementsById("userChoice").innerText);
+  document.getElementsById("userChoice").innerText = ++oldScore;
+}
+
+function incrementCPUResult() {
+  let CPUOldScore = parseInt(getElementsById("CPUChoice").innerText);
+  document.getElementsById("CPUChoice").innerText = ++CPUOldScore;
 }
 
 function generateCPU() {
@@ -34,24 +40,32 @@ function generateCPU() {
 function calculateWinner(user, CPU) {
 // if statements here
 if ( userChoice === CPUChoice) {
-  return "It's a Draw!"
+  alert ("It's a Draw!")
+  incrementCPUResult();
+  incrementScore();
 }
 else if (userChoice === 0 && CPUChoice === 1) {
- return "You lose! The computer chose ${CPUChoice} "
+ alert("You lose! The computer chose ${CPUChoice} ");
+ incrementCPUResult();
 }
 else if (userChoice === 1 && CPUChoice === 0 ) {
-  "Wahoo! you win! The Computer chose ${CPUChoice} and paper covers rock."
+ alert ("Wahoo! you win! The Computer chose ${CPUChoice} and paper covers rock.");
+  incrementScore();
 }
 else if (userChoice === 1 && CPUChoice === 2) {
-return "You lose! The computer chose ${CPUChoice}"
+ alert ("You lose! The computer chose ${CPUChoice}.");
+ incrementCPUResult();
 }
 else if (userChoice === 2 && CPUChoice === 1) {
- return "Hooray! You win! The computer chose ${CPUChoice}."
+ alert ("Hooray! You win! The computer chose ${CPUChoice}.");
+ incrementScore();
 }
 else if (userChoice === 0 && CPUChoice === 2) {
-  return "Nice! The Computer chose ${CPUChoice} and rock crushes scissors!"
+  alert("Nice! The Computer chose ${CPUChoice} and rock crushes scissors!");
+  incrementScore();
 }
 else if (userChoice === 2 && CPUChoice === 0) {
-  return "Too bad... The Computer chose ${CPUChoice} and rock crushes scissors."
+  alert ("Too bad... The Computer chose ${CPUChoice} and rock crushes scissors.");
+  incrementCPUResult();
 }
 }
