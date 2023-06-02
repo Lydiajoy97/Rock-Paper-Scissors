@@ -55,8 +55,3 @@ else if (userChoice === 2 && CPUChoice === 0) {
   return "Too bad... The Computer chose ${CPUChoice} and rock crushes scissors."
 }
 }
-
-function displayResults() {
-
-  
-}
