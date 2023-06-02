@@ -5,20 +5,25 @@ var scissors = 2;
 
 var userChoice; 
 
+document.getElementsByClassName("buttons").addEventListener("click", handlePlay);
+
 function handleRock(e) {
   userChoice = rock;
+  alert ("you clicked rock");
 }
 
 function handlePaper(e) {
   userChoice = paper;
+  alert ("you clicked paper");
 }
 
 function handleScissors(e) {
   userChoice = scissors
+  alert ("you clicked scissors");
 }
 
 function handlePlay(e) {
-  console.log("User choice is: rock" + userChoice);
+  console.log("User choice is: ${userChoice}" + userChoice);
   let CPUChoice = generateCPU();
 }
 
@@ -38,7 +43,7 @@ else if (userChoice === 1 && CPUChoice === 0 ) {
   "Wahoo! you win! The Computer chose ${CPUChoice} and paper covers rock."
 }
 else if (userChoice === 1 && CPUChoice === 2) {
-return "You lose! The computer chose ${CPUChoice} "
+return "You lose! The computer chose ${CPUChoice}"
 }
 else if (userChoice === 2 && CPUChoice === 1) {
  return "Hooray! You win! The computer chose ${CPUChoice}."
@@ -49,4 +54,9 @@ else if (userChoice === 0 && CPUChoice === 2) {
 else if (userChoice === 2 && CPUChoice === 0) {
   return "Too bad... The Computer chose ${CPUChoice} and rock crushes scissors."
 }
+}
+
+function displayResults() {
+
+  
 }
