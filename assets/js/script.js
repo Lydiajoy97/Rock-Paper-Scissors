@@ -17,6 +17,9 @@ generateCPU();
 calculateWinner();
 } ))
 
+// plays the sound effect when a button is clicked 
+
+
 //to draw the computer generated number
 
 function generateCPU(e) {
