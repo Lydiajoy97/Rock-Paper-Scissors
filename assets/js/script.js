@@ -3,30 +3,19 @@
 const CPUChoiceDisplay = document.getElementById('cpu-choice');
 const userChoiceDisplay = document.getElementById('user-choice');
 const resultDisplay = document.getElementById('results');
-const possibleChoices = document.querySelectorAll('button');
+const possibleChoices = document.querySelector('button');
 let userChoice
 let CPUChoice
 
-possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) => {
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
 userChoice = e.target.id
 userChoiceDisplay.innerHTML = userChoice
-generateCPU()
+CPUChoiceDisplay.innerHTML = CPUChoice
 } ))
-
-// Game variables
-var rock = 0;
-var paper = 1;
-var scissors = 2;
-
 
 function generateCPU(e) {
  const randomNumber = Math.floor(Math.random() * 3) +1;
  console.log(randomNumber);
-}
-
-function getCPUChoice() {
- CPUChoice = generateCPU();
- return CPUChoice;
 }
 
 function calculateWinner() {
