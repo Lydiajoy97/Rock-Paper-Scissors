@@ -7,6 +7,7 @@
     color: #fcfafa; 
     background-color: #270336;
     border-radius: 40%;
+    font-family:'Rajdhani', sans-serif;
  }
  
  img {
@@ -19,6 +20,7 @@
     display: flex;
     justify-content: center;
     gap: 30px;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 button {
