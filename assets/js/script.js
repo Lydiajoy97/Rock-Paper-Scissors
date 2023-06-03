@@ -6,13 +6,14 @@ const resultDisplay = document.getElementById('results');
 const possibleChoices = document.querySelectorAll('button');
 let userChoice
 let CPUChoice
-let score
+let score = 0 
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
 userChoice = e.target.id
 userChoiceDisplay.innerHTML = userChoice
 generateCPU();
 calculateWinner();
+drawScore();
 } ))
 
 function generateCPU(e) {
@@ -36,27 +37,17 @@ if ( userChoice === CPUChoice) {
 }
 else if (userChoice === "rock" && CPUChoice === "paper" || userChoice === "paper" && CPUChoice === "scissors" ||
  userChoice === "scissors" && CPUChoice === "rock") {
- result = `Computer chose ${CPUChoice} Too bad... You lost!`
+ result = `Computer chose ${CPUChoice}... Better luck next time...`
+
+ document.getElementById("cpu-score").innerText ++;
 }
 else if (userChoice === "paper" && CPUChoice === "rock" || userChoice === "scissors" && CPUChoice === "paper" || 
 userChoice === "rock" && CPUChoice === "scissors") {
- result = `Computer chose ${CPUChoice} You won! Wahoo!`
+ result =`Computer chose ${CPUChoice}! You won! Wahoo!`
+
+ document.getElementById("user-score").innerText ++;
 }
 resultDisplay.innerHTML = result
-}
-
-// This adds a score of 1 to the user or computer depending on who wins. Written using the Love Maths Tutorial.
-
-function ScoreDisplay() {
-function AddUserScore() {
-  let oldScore = parseInt(getElementsById("#user-score").innerText);
-  document.getElementsById("#user-score").innerText = oldScore + 1;
-}
-
-function AddCPUResults() {
-  let CPUOldScore = parseInt(getElementsById("#cpu-score").innerText);
-  document.getElementsById("#cpu-score").innerText = CPUOldScore +1;
-}
 }
 
 
