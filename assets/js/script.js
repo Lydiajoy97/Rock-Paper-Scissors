@@ -1,4 +1,4 @@
-// Code for const written using tutorial by Ania Kubow
+// Code for const and initial structure written using youtube tutorial by Ania Kubow
 
 const CPUChoiceDisplay = document.getElementById('cpu-choice');
 const userChoiceDisplay = document.getElementById('user-choice');
@@ -8,13 +8,17 @@ let userChoice
 let CPUChoice
 let score = 0 
 
+//function each time you click 
+
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
 userChoice = e.target.id
 userChoiceDisplay.innerHTML = userChoice
 generateCPU();
 calculateWinner();
-drawScore();
+gameOver();
 } ))
+
+//to draw the computer generated number
 
 function generateCPU(e) {
  const randomNumber = Math.floor(Math.random() * 3) +1;
@@ -31,9 +35,18 @@ function generateCPU(e) {
  CPUChoiceDisplay.innerHTML = CPUChoice
 }
 
+// if statements to calculate winner and display results tally
+
 function calculateWinner() {
-if ( userChoice === CPUChoice) {
-  result = `Draw!`
+  document.getElementById("rock");
+  document.getElementById("paper");
+  document.getElementById("scissors");
+
+if (userChoice === CPUChoice) {
+  result = `Draw! You both get a point...`
+
+  document.getElementById("cpu-score").innerText ++;
+  document.getElementById("user-score").innerText ++;
 }
 else if (userChoice === "rock" && CPUChoice === "paper" || userChoice === "paper" && CPUChoice === "scissors" ||
  userChoice === "scissors" && CPUChoice === "rock") {
@@ -49,5 +62,3 @@ userChoice === "rock" && CPUChoice === "scissors") {
 }
 resultDisplay.innerHTML = result
 }
-
-
