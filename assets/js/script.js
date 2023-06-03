@@ -35,42 +35,27 @@ function incrementCPUResult() {
   document.getElementsById("CPUChoice").innerText = ++CPUOldScore;
 }
 
-//generates computers choice
-
-/* function generateCPU() {
-  return Math.random() * (2-0) +1;
-}*/
-
-//calcutes winner based on if statements
-
 function calculateWinner(user, CPU) {
 if ( userChoice === CPUChoice) {
-  alert ("It's a Draw!")
-  incrementCPUResult();
-  incrementScore();
+  result = userChoice, CPUChoice;
 }
 else if (userChoice === 0 && CPUChoice === 1) {
- alert("You lose! The computer chose ${CPUChoice} ");
- incrementCPUResult();
+ result = CPUChoice;
 }
-else if (userChoice === 1 && CPUChoice === 0 ) {
- alert ("Wahoo! you win! The Computer chose ${CPUChoice} and paper covers rock.");
-  incrementScore();
+else if (userChoice === 1 && CPUChoice === 0) {
+ result = userChoice;
 }
 else if (userChoice === 1 && CPUChoice === 2) {
- alert ("You lose! The computer chose ${CPUChoice}.");
- incrementCPUResult();
+ result = CPUChoice;
 }
 else if (userChoice === 2 && CPUChoice === 1) {
- alert ("Hooray! You win! The computer chose ${CPUChoice}.");
- incrementScore();
+ result = userChoice;
+ 
 }
 else if (userChoice === 0 && CPUChoice === 2) {
-  alert("Nice! The Computer chose ${CPUChoice} and rock crushes scissors!");
-  incrementScore();
+ result = userChoice;
 }
 else if (userChoice === 2 && CPUChoice === 0) {
-  alert ("Too bad... The Computer chose ${CPUChoice} and rock crushes scissors.");
-  incrementCPUResult();
+  result = CPUChoice;
 }
 }
