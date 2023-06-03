@@ -4,53 +4,45 @@ var paper = 1;
 var scissors = 2;
 
 function handleRock(e) {
-  userChoice = rock;
-  return userChoice;
+  userChoice = rock
 }
 
 function handlePaper(e) {
-  userChoice = paper;
-  return userChoice;
+  userChoice = paper
 }
 
 function handleScissors(e) {
   userChoice = scissors
-  return userChoice;
 }
 
-Button.addEventListener("click", compareCPUVsUser);
+function handlePlay() {
+ Button.addEventListener("click");
+ console.log(userChoice);
+ CPUChoice = generateCPU();
+}
 
-function randomChoice(e) {
-  var randomChoice = Math.floor(Math.random() * (0-2) +1);
+function generateCPU(e) {
+ CPUChoice = Math.floor(Math.random() * (0-2) +1);
 }
 
 function getCPUChoice() {
- var CPUChoice = randomChoice();
+ CPUChoice = generateCPU();
  return CPUChoice;
 }
 
-function calculateWinner(user, CPU) {
+function calculateWinner() {
 if ( userChoice === CPUChoice) {
-  result = userChoice, CPUChoice;
+  h4.innerText = "Its a draw!"
 }
-else if (userChoice === 0 && CPUChoice === 1) {
- result = CPUChoice;
+else if (userChoice === "rock" && CPUChoice === "paper" || userChoice === "paper" && CPUChoice === "scissors" ||
+ userChoice === "scissors" && CPUChoice === "rock") {
+ h4.innerText = "Too bad!"
+ return incrementCPUResult();
 }
-else if (userChoice === 1 && CPUChoice === 0) {
- result = userChoice;
-}
-else if (userChoice === 1 && CPUChoice === 2) {
- result = CPUChoice;
-}
-else if (userChoice === 2 && CPUChoice === 1) {
- result = userChoice;
- 
-}
-else if (userChoice === 0 && CPUChoice === 2) {
- result = userChoice;
-}
-else if (userChoice === 2 && CPUChoice === 0) {
-  result = CPUChoice;
+else if (userChoice === "paper" && CPUChoice === "rock" || userChoice === "scissors" && CPUChoice === "paper" || 
+userChoice === "rock" && CPUChoice === "scissors") {
+ h4.innerText = "You got it!"
+ return incrementScore();
 }
 }
 
