@@ -4,8 +4,8 @@
     align-items: center;
     flex-wrap: wrap;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: grey; 
-    background-color: #f6edfa;
+    color: #fcfafa; 
+    background-color: #270336;
     border-radius: 40%;
  }
  
@@ -22,15 +22,18 @@
 }
 
 button {
-    border-radius: 5%;
-    background-color: #808080;
-    border: none;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 20%;
+    background-color: #f496e4c1;
+    border: black;
     color: #fff;
 }
 
-#score {
+#results-tally {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-end;
 }

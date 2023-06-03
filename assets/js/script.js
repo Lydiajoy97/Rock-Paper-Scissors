@@ -15,7 +15,6 @@ userChoice = e.target.id
 userChoiceDisplay.innerHTML = userChoice
 generateCPU();
 calculateWinner();
-gameOver();
 } ))
 
 //to draw the computer generated number
