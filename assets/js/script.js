@@ -1,28 +1,27 @@
+// Code for const written using tutorial by Ania Kubow
+
+const CPUChoiceDisplay = document.getElementById('cpu-choice');
+const userChoiceDisplay = document.getElementById('user-choice');
+const resultDisplay = document.getElementById('results');
+const possibleChoices = document.querySelectorAll('button');
+let userChoice
+let CPUChoice
+
+possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) => {
+userChoice = e.target.id
+userChoiceDisplay.innerHTML = userChoice
+generateCPU()
+} ))
+
 // Game variables
 var rock = 0;
 var paper = 1;
 var scissors = 2;
 
-function handleRock(e) {
-  userChoice = rock
-}
-
-function handlePaper(e) {
-  userChoice = paper
-}
-
-function handleScissors(e) {
-  userChoice = scissors
-}
-
-function handlePlay() {
- Button.addEventListener("click");
- console.log(userChoice);
- CPUChoice = generateCPU();
-}
 
 function generateCPU(e) {
- CPUChoice = Math.floor(Math.random() * (0-2) +1);
+ const randomNumber = Math.floor(Math.random() * 3) +1;
+ console.log(randomNumber);
 }
 
 function getCPUChoice() {
