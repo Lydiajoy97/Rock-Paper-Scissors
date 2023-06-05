@@ -15,11 +15,15 @@ userChoice = e.target.id
 userChoiceDisplay.innerHTML = userChoice
 generateCPU();
 calculateWinner();
+sound();
 } ))
 
 // plays the sound effect when a button is clicked 
-
-
+function sound(e) {
+  var audio = new Audio('assets/js/sound_effect.wav');
+    audio.play();
+}
+console.log(sound)
 //to draw the computer generated number
 
 function generateCPU(e) {
