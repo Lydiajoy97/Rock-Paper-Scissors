@@ -56,13 +56,13 @@ if (userChoice === CPUChoice) {
 }
 else if (userChoice === "rock" && CPUChoice === "paper" || userChoice === "paper" && CPUChoice === "scissors" ||
  userChoice === "scissors" && CPUChoice === "rock") {
- result = `Computer won with ${CPUChoice}...`
+ result = `Computer won this round with ${CPUChoice}...`
 
  document.getElementById("cpu-score").innerText ++;
 }
 else if (userChoice === "paper" && CPUChoice === "rock" || userChoice === "scissors" && CPUChoice === "paper" || 
 userChoice === "rock" && CPUChoice === "scissors") {
- result =`Computer chose ${CPUChoice}! You won! Wahoo!`
+ result =`Computer chose ${CPUChoice}! You won this round! Wahoo!`
 
  document.getElementById("user-score").innerText ++;
 }
