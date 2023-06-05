@@ -8,6 +8,7 @@
     color: #fefefe;
     border-radius: 40%;
     font-family:'Rajdhani', sans-serif;
+    font-size: small;
  }
 
  .page-heading {
@@ -35,6 +36,7 @@
  button {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
     background-color: #f496e4c1;
     border: none;
@@ -66,3 +68,6 @@ h4 {
    text-align: center;
 }
 
+#game-over {
+   margin: 0 auto;
+}
