@@ -15,6 +15,11 @@
    justify-content: center;
  }
  
+ .img-container {
+    display: flex;
+    justify-content: center;
+ }
+
  img {
     width: 150px;
     height: 150px;
@@ -26,6 +31,7 @@
     gap: 20px;
  }
 
+ /*button click animation video used to help write code for shadow, transition, cursor and transform.*/
  button {
     display: flex;
     flex-direction: column;
@@ -48,9 +54,15 @@
 #results-tally {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 }
 
 fieldset {
    border-radius: 5rem;
+   padding: 10px;
 }
+
+h4 {
+   text-align: center;
+}
+

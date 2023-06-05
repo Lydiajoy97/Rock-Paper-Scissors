@@ -52,7 +52,7 @@ if (userChoice === CPUChoice) {
 }
 else if (userChoice === "rock" && CPUChoice === "paper" || userChoice === "paper" && CPUChoice === "scissors" ||
  userChoice === "scissors" && CPUChoice === "rock") {
- result = `Computer chose ${CPUChoice}... Better luck next time...`
+ result = `Computer won with ${CPUChoice}...`
 
  document.getElementById("cpu-score").innerText ++;
 }
