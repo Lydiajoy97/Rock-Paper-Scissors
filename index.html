@@ -11,25 +11,26 @@
     <script src="assets/js/sound_effect.wav"></script>
 </head>
 <body>
-    <header class="img-container"><div class="landing-img"><img src="assets/images/Logo.png"></div></header>
-
+    <fieldset><header class="img-container"><div class="landing-img"><img src="assets/images/Logo.png"></div></header>
+    <div class="page-heading">Rock, Paper or Scissors?...</div>
+    <br>
     <div class="buttons">
     <button id="rock" onclick="sound()">Rock <i class="fa-regular fa-hand-back-fist fa-rotate-90"></i></button>
     <button id="paper" onclick="sound()">Paper  <i class="fa-regular fa-hand"></i></button>
     <button id="scissors" onclick="sound()">Scissors  <i class="fa-regular fa-hand-peace"></i></button></div>
     <br>
-    <div id="results">
-        <div id="user-choice">Rock, Paper or Scissors?...</div>
-        <div id="cpu-choice"></div>
+    <fieldset><div id="results">
+        <div id="user-choice">What will you decide?</div>
+        <div id="cpu-choice"></div></fieldset>
     </div>
     <br>
-    <h4>Results:</h4>
+    <fieldset><h4>Leaderboard:</h4>
     <div id="results-tally">
         <div> Your Score: </div><div id="user-score"> 0 </div>
         <div> Computer's Score: </div><div id="cpu-score"> 0 </div>
-    </div>
+    </div></fieldset>
  <br>
-    <div id="game-over" onclick="replay()">End Game</div>
+    <div id="game-over" onclick="replay()">End Game</div></fieldset>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
