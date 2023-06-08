@@ -8,7 +8,6 @@ let userChoice
 let CPUChoice
 
 //function each time you click 
-
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
 userChoice = e.target.id
 userChoiceDisplay.innerHTML = userChoice
@@ -69,7 +68,15 @@ userChoice === "rock" && CPUChoice === "scissors") {
 resultDisplay.innerHTML = result
 }
 
+let myTimeOut = handleTimeout(alert, 15000);
+
 function handleTimeout() {
- setTimeout(alert, 100000);
- alert(`Game Over! Thanks for playing!`);
+   setTimeout(function() {
+    alert("Game Over! Thanks for playing! Refresh to play again.");
+   }, 15000);
+  }
+
+function myStopFunction() {
+  clearTimeout(myTimeOut);
+  refreshButton.addEventListener('click', calculateWinner());
 }
