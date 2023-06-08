@@ -42,7 +42,6 @@ function generateCPU(e) {
 }
 
 // if statements to calculate winner and display results tally
-
 function calculateWinner() {
   document.getElementById("rock");
   document.getElementById("paper");
