@@ -70,6 +70,7 @@ resultDisplay.innerHTML = result
 
 let myTimeOut = handleTimeout(alert, 15000);
 
+/*
 function handleTimeout() {
    setTimeout(function() {
     alert("Game Over! Thanks for playing! Refresh to play again.");
@@ -80,3 +81,4 @@ function myStopFunction() {
   clearTimeout(myTimeOut);
   refreshButton.addEventListener('click', calculateWinner());
 }
+*/
