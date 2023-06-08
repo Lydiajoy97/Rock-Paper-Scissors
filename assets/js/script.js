@@ -73,7 +73,7 @@ let myTimeOut = handleTimeout(alert, 15000);
 function handleTimeout() {
    setTimeout(function() {
     alert("Game Over! Thanks for playing! Refresh to play again.");
-   }, 15000);
+   }, 10000);
   }
 
 function myStopFunction() {
