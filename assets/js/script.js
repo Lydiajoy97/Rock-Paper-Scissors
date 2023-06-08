@@ -3,10 +3,9 @@
 const CPUChoiceDisplay = document.getElementById('cpu-choice');
 const userChoiceDisplay = document.getElementById('user-choice');
 const resultDisplay = document.getElementById('results');
-const possibleChoices = document.querySelectorAll("button");
+const possibleChoices = document.querySelectorAll('button');
 let userChoice
 let CPUChoice
-let score = 0 
 
 //function each time you click 
 
@@ -16,6 +15,7 @@ userChoiceDisplay.innerHTML = userChoice
 generateCPU();
 calculateWinner();
 sound();
+handleTimeout();
 } ))
 
 // plays the sound effect when a button is clicked 
@@ -67,4 +67,9 @@ userChoice === "rock" && CPUChoice === "scissors") {
  document.getElementById("user-score").innerText ++;
 }
 resultDisplay.innerHTML = result
+}
+
+function handleTimeout() {
+ setTimeout(alert, 100000);
+ alert(`Game Over! Thanks for playing!`);
 }
