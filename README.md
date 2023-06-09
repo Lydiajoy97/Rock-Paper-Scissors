@@ -44,9 +44,10 @@ I would like a game that is fast pace and accessible.
 1. Buttons for Rock, Paper and Scissors. 
 2. A game logo. 
 3. Rock, Paper and Scissors icons. 
-4. A leaderboard display.
-5. Sound effects on button clicks.
-6. An alert for the user when the game ends.
+This will help this know which button to click. This is helper if they have only been used to an in person version of this game.
+4. A leaderboard display which updates in real time.
+5. Sound effects on button clicks to add to user-experience along with button grow and shrink animation.
+6. An alert for the user when the game ends to stop game play.
 
 # Structure-Plan:
 The web page will contain three buttons for Rock, Paper and Scissors in the centre. It will display a question 'Rock, Paper or Scissors?...' Which encourages the user to click a button and play the game. The results will be added up on the leaderboard and users can refresh the page to start again.
@@ -129,6 +130,8 @@ https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=826s (Ania Kubow tutorial)
 https://betterprogramming.pub/7-ways-to-code-rock-paper-scissors-in-javascript-4189a5e7e535 (for conditions)
 
 https://replit.com/talk/learn/Add-sound-to-a-button-in-Html-and-JavaScript/120876 (For sound button)
+
+https://www.youtube.com/watch?v=F7iFnhSZe7o&t=167s (For button click animation)
 
 https://www.w3schools.com/jsref/met_win_cleartimeout.asp (For timeOut function)
 

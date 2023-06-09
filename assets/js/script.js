@@ -23,9 +23,8 @@ function sound(e) {
   var audio = new Audio('assets/js/sound_effect.wav');
     audio.play();
 }
-console.log(sound);
-//Computer generated number. Initial functions written with help from Callum Robley.
 
+//Computer generated number. Initial functions written with help from Callum Robley.
 function generateCPU(e) {
  const randomNumber = Math.floor(Math.random() * 3) +1;
  console.log(randomNumber);
