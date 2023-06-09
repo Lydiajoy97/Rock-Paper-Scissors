@@ -139,6 +139,8 @@ https://www.programiz.com/javascript/setTimeout (For timeOut function)
 
 https://github.com/tindyc/Combat-Canvas (ReadMe structure)
 
+https://codepen.io/teapowered/pen/PoyrvOm (Callum Robley for inital structure explaination)
+
 Contents:
 The contents of this webpage was written by me without any additional help.
 
