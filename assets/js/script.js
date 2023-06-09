@@ -8,7 +8,7 @@ let userChoice;
 let CPUChoice;
 let result;
 
-//function each time you click 
+//function each time you click using the Ania Kubow tutorial
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
 userChoice = e.target.id;
 userChoiceDisplay.innerHTML = userChoice;
@@ -41,7 +41,7 @@ function generateCPU(e) {
  CPUChoiceDisplay.innerHTML = CPUChoice;
 }
 
-// if statements to calculate winner and display results tally
+// if statements for conditions to display results tally written using a codepen by Vika Buyuklyan and Ania Kubows web tutorial.
 function calculateWinner() {
   document.getElementById("rock");
   document.getElementById("paper");
