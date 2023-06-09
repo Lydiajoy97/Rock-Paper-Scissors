@@ -24,7 +24,7 @@ function sound(e) {
     audio.play();
 }
 
-//Computer generated number. Initial functions written with help from Callum Robley.
+//Computer generated number. Initial functions written with help from Callum Robley and the Ania Kubow tutorial.
 function generateCPU(e) {
  const randomNumber = Math.floor(Math.random() * 3) +1;
  console.log(randomNumber);
